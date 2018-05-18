@@ -16,89 +16,100 @@
       position: relative;
       height: 100%;
     }
+
     .swiper-container {
       width: 100%;
       height: 100%;
     }
 
-    .body-container{
+    .body-container {
       position: absolute;
       z-index: 1;
       left: 0;
-      top:0;
+      top: 0;
       bottom: 0;
       right: 0;
       background: url('./images/bg.png');
-      background-size:cover; 
+      background-size: cover;
     }
-    .swiper-slide{
+
+    .swiper-slide {
       position: relative;
     }
-    .swiper-slide-content{
+
+    .swiper-slide-content {
       position: absolute;
     }
-    .tip{
+
+    .tip {
       display: none;
+    }
+
+    .part1 {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: orange;
+    }
+
+    .part2 {
+      display: none;
+      height: 100%;
     }
   </style>
 </head>
 
 <body>
   <div class="body-container">
-      
+    <section class="part1" onclick="gotoPart2()">
+      点击进入回忆
+    </section>
   </div>
-  <div style="position: fixed;width: 50px;height: 50px;left: 20px;top: 200px;z-index:99;background-color:red">方块</div>
-  <!-- Swiper -->
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><h1 class="animated infinite bounce">Example</h1></div>
-      <div class="swiper-slide">
-        <div class="swiper-slide-content">
-            <div>title</div>
-            <p>contentcontentcontentcontentcontent <button onclick="showTip()">clickme</button></p>
-            <p class="tip">
-                恒山（悬空寺）——飞梁为基，青云化壁
-            </p>
+
+  <section class="part2">
+    <div style="position: fixed;width: 50px;height: 50px;left: 20px;top: 200px;z-index:99;background-color:red">方块</div>
+    <!-- Swiper -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <h1 class="animated infinite bounce">Example</h1>
         </div>
+        <div class="swiper-slide">
+          <div class="swiper-slide-content">
+            <div>title</div>
+            <p>contentcontentcontentcontentcontent
+              <button onclick="showTip()">clickme</button>
+            </p>
+            <p class="tip">
+              恒山（悬空寺）——飞梁为基，青云化壁
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div>
+        <div class="swiper-slide">Slide 10</div>
       </div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
-      <div class="swiper-slide">Slide 10</div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
     </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
-  </div>
- 
- 
-    
+  </section>
 
   <!-- Swiper JS -->
   <script src="https://cdn.bootcss.com/Swiper/4.2.6/js/swiper.min.js"></script>
   <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
   <script src="scripts/screen.js"></script>
   <script src="scripts/index.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper('.swiper-container', {
-      direction: 'vertical',
-      slidesPerView: 1,
-      freeMode: true,
-      on: {
-        touchMove(e) {
-          // console.log(e.touches[0].screenY);
-        },
-        slideNextTransitionStart(e) {
-          console.log(this.activeIndex);
-        },
-      }
-    });
-  </script>
 </body>
 
 </html>
