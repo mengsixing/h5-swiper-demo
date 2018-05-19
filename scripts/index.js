@@ -1,8 +1,15 @@
+var audio;
 $(function(){
+  audio=$('#audio')[0];
   var height = document.documentElement.clientHeight;
   var width = document.documentElement.clientWidth;
   changeOrientation($('.body-container'));
   changeOrientation($('.swiper-slide-content'));
+
+  // 绑定点击播放事件
+  $('.music-icon').click(function(){
+    audio.pause();
+  });
 });
 
 function showTip(){
@@ -25,5 +32,6 @@ function gotoPart2(){
       },
     }
   });
+  audio.play();
 }
 
