@@ -8,12 +8,18 @@ $(function(){
 
   // 绑定点击播放事件
   $('.music-icon').click(function(){
-    audio.pause();
+    if(audio.paused){
+      audio.play();
+      $('.music-icon').addClass('run');
+    }else{
+      audio.pause();
+      $('.music-icon').removeClass('run');
+    }
   });
 });
 
 function showTip(){
-  $('.tip').removeClass('tip').addClass('animated fadeIn');
+  $('.tip').show().addClass('animated fadeIn');
 }
 
 function gotoPart2(){
@@ -33,5 +39,6 @@ function gotoPart2(){
     }
   });
   audio.play();
+  $('.music-icon').addClass('run');
 }
 

@@ -1,0 +1,113 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+.slow-animate{
+  animation-duration: 5s;
+}
+
+/* 音乐旋转动画 */
+@keyframes keeproute {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
+/* 提示点击闪动 */
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.music-icon {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  right: 20px;
+  top: 20px;
+  z-index: 99;
+  background: url('../images/music_off.png');
+  background-size: cover;
+  &.run{
+    background-image: url('../images/music_on.png') !important;
+    animation: keeproute 5s linear infinite;
+  }
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.body-container {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: url('../images/bg.png');
+  background-size: cover;
+}
+
+.swiper-slide {
+  position: relative;
+  .swiper-slide-content {
+    position: absolute;
+  }
+}
+
+
+
+.tip {
+  display: none;
+  position: absolute;
+  bottom:10%;
+  color: white;
+}
+
+.tip-icon{
+  animation: fadein 2s linear infinite;
+}
+
+.part1 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: burlywood;
+}
+
+.part2 {
+  display: none;
+  height: 100%;
+}
+
+
+.scene1-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .hand_shake{
+    animation-duration: 5s;
+  }
+}
+
+
+

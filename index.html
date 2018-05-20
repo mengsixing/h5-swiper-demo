@@ -21,18 +21,21 @@
   </div>
 
   <section class="part2">
-    <div class="music-icon run"></div>
-    <div style="position: fixed;width: 50px;height: 50px;left: 20px;top: 200px;z-index:99;background-color:red">方块</div>
+    <div class="music-icon"></div>
+    <div style="position: fixed;width: 50px;height: 50px;left: 100px;top: 200px;z-index:99;background-color:red">方块</div>
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <h1 class="animated infinite bounce">Example</h1>
+            <div class="swiper-slide-content scene1-content">
+                <img src="./images/hand.png" alt="向左滑动" />
+                <img class="animated infinite shake hand_shake" src="./images/hand1.png" alt="向左滑动" />
+            </div>
         </div>
         <div class="swiper-slide">
           <div class="swiper-slide-content">
-            <div>title</div>
-            <p>contentcontentcontentcontentcontent
-              <button onclick="showTip()">clickme</button>
+            <div>第二页</div>
+            <p>
+              <img class="tip-icon" src="./images/dian.png" alt="点"  onclick="showTip()">
             </p>
             <p class="tip">
               恒山（悬空寺）——飞梁为基，青云化壁
