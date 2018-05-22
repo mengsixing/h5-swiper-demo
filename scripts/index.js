@@ -23,22 +23,36 @@ function showTip(){
 }
 
 function gotoPart2(){
-  $('.part1').hide();
-  $('.part2').show();
-  var swiper = new Swiper('.swiper-container', {
-    direction: 'vertical',
-    slidesPerView: 1,
-    freeMode: true,
-    on: {
-      touchMove(e) {
-        // console.log(e.touches[0].screenY);
-      },
-      slideNextTransitionStart(e) {
-        console.log(this.activeIndex);
-      },
+  // $('.body-container').remove();
+  anime({
+    targets: $('.body-container')[0],
+    opacity: .5,
+    duration:3000,
+    backgroundColor: '#fff',
+    easing: 'easeInOutQuad',
+    begin: function(anim) {
+      $('#change-part')[0].play();
+    },
+    complete: function(anim) {
+      $('.body-container').remove();
+      $('.part2').show();
+      var swiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        slidesPerView: 1,
+        freeMode: true,
+        on: {
+          touchMove(e) {
+            // console.log(e.touches[0].screenY);
+          },
+          slideNextTransitionStart(e) {
+            console.log(this.activeIndex);
+          },
+        }
+      });
+      audio.play();
+      $('.music-icon').addClass('run');
     }
   });
-  audio.play();
-  $('.music-icon').addClass('run');
+  
 }
 

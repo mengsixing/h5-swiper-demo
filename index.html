@@ -14,9 +14,10 @@
 
 <body>
   <audio id="audio" src="./audios/music.mp3" preload="auto"></audio>
+  <audio id="change-part" src="./audios/change.mp3" preload="auto"></audio>
   <div class="body-container">
     <section class="part1" onclick="gotoPart2()">
-      点击进入回忆
+      <h3 class="xxx">点击进入回忆</h3>
     </section>
   </div>
 
@@ -42,19 +43,19 @@
             </p>
           </div>
         </div>
-        <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 5</div>
-        <div class="swiper-slide">Slide 6</div>
-        <div class="swiper-slide">Slide 7</div>
-        <div class="swiper-slide">Slide 8</div>
-        <div class="swiper-slide">Slide 9</div>
-        <div class="swiper-slide">Slide 10</div>
+        <div class="swiper-slide">
+            <div class="swiper-slide-content">Slide 3</div>
+        </div>
+        <div class="swiper-slide"><div class="swiper-slide-content">Slide 3</div></div>
+        <div class="swiper-slide"><div class="swiper-slide-content">Slide 3</div></div>
+        <div class="swiper-slide"><div class="swiper-slide-content">Slide 3</div></div>
+        <div class="swiper-slide"><div class="swiper-slide-content">Slide 3</div></div>
       </div>
     </div>
   </section>
 
   <!-- Swiper JS -->
+  <script src="https://cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
   <script src="https://cdn.bootcss.com/Swiper/4.2.6/js/swiper.min.js"></script>
   <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
   <script src="scripts/screen.js"></script>

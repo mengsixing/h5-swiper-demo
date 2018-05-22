@@ -60,23 +60,27 @@ body {
 
 .body-container {
   position: absolute;
-  z-index: 1;
+  z-index: 9999;
   left: 0;
   top: 0;
   bottom: 0;
   right: 0;
-  background: url("../images/bg.png");
   background-size: cover; }
 
 .swiper-slide {
   position: relative; }
   .swiper-slide .swiper-slide-content {
-    position: absolute; }
+    position: absolute;
+    background: url("../images/bg.png");
+    background-size: cover; }
 
 .tip {
   display: none;
   position: absolute;
   bottom: 10%;
+  left: 0;
+  right: 0;
+  text-align: center;
   color: white; }
 
 .tip-icon {
@@ -96,7 +100,6 @@ body {
   background-color: burlywood; }
 
 .part2 {
-  display: none;
   height: 100%; }
 
 .scene1-content {
