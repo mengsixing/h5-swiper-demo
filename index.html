@@ -18,22 +18,23 @@
   <div class="body-container">
     <section class="part1" onclick="gotoPart2()">
       <h3 class="xxx">点击进入回忆</h3>
+      <img class="circle" src="./images/circle.png" alt="旋转">
     </section>
   </div>
 
   <section class="part2">
     <div class="music-icon"></div>
-    <div style="position: fixed;width: 50px;height: 50px;left: 100px;top: 200px;z-index:99;background-color:red">方块</div>
+    <img class="car" src="./images/car.png" alt="汽车">
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <div class="swiper-slide-content scene1-content">
+            <div class="swiper-slide-content scene-content1">
                 <img src="./images/hand.png" alt="向左滑动" />
                 <img class="animated infinite shake hand_shake" src="./images/hand1.png" alt="向左滑动" />
             </div>
         </div>
         <div class="swiper-slide">
-          <div class="swiper-slide-content">
+          <div class="swiper-slide-content scene-content2">
             <div>第二页</div>
             <p>
               <img class="tip-icon" src="./images/dian.png" alt="点"  onclick="showTip()">
@@ -44,12 +45,11 @@
           </div>
         </div>
         <div class="swiper-slide">
-            <div class="swiper-slide-content">Slide 3</div>
+            <div class="swiper-slide-content  scene-content3">Slide 3</div>
         </div>
-        <div class="swiper-slide"><div class="swiper-slide-content">Slide 3</div></div>
-        <div class="swiper-slide"><div class="swiper-slide-content">Slide 3</div></div>
-        <div class="swiper-slide"><div class="swiper-slide-content">Slide 3</div></div>
-        <div class="swiper-slide"><div class="swiper-slide-content">Slide 3</div></div>
+        <div class="swiper-slide"><div class="swiper-slide-content scene-content4">Slide 4</div></div>
+        <div class="swiper-slide"><div class="swiper-slide-content scene-content5">Slide 5</div></div>
+        <div class="swiper-slide"><div class="swiper-slide-content scene-content6">Slide 6</div></div>
       </div>
     </div>
   </section>

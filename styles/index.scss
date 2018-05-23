@@ -4,11 +4,12 @@ body {
   height: 100%;
 }
 
-.slow-animate{
+.slow-animate {
   animation-duration: 5s;
 }
 
 /* 音乐旋转动画 */
+
 @keyframes keeproute {
   from {
     transform: rotate(0deg)
@@ -17,17 +18,28 @@ body {
     transform: rotate(360deg)
   }
 }
+
 /* 提示点击闪动 */
+
 @keyframes fadein {
   0% {
     opacity: 0;
   }
-  50%{
+  50% {
     opacity: 1;
   }
   100% {
     opacity: 0;
   }
+}
+
+.car {
+  position: fixed;
+  left: 12%;
+  top: 200px;
+  z-index: 99;
+  width: 120px;
+  transform: rotateZ(90deg)
 }
 
 .music-icon {
@@ -39,10 +51,15 @@ body {
   z-index: 99;
   background: url('../images/music_off.png');
   background-size: cover;
-  &.run{
+  &.run {
     background-image: url('../images/music_on.png') !important;
     animation: keeproute 5s linear infinite;
   }
+}
+
+.circle{
+  display: none;
+  animation: keeproute 2s linear infinite;
 }
 
 .swiper-container {
@@ -57,31 +74,27 @@ body {
   top: 0;
   bottom: 0;
   right: 0;
-  background-size: cover;
 }
 
 .swiper-slide {
   position: relative;
   .swiper-slide-content {
     position: absolute;
-    background: url('../images/bg.png');
     background-size: cover;
   }
 }
 
-
-
 .tip {
   display: none;
   position: absolute;
-  bottom:10%;
+  bottom: 10%;
   left: 0;
   right: 0;
   text-align: center;
   color: white;
 }
 
-.tip-icon{
+.tip-icon {
   animation: fadein 2s linear infinite;
 }
 
@@ -95,22 +108,53 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: burlywood;
+  background-size: cover;
+  background-color: white;
+  background-image: url('../images/scene5.png');
 }
+
+
 
 .part2 {
   height: 100%;
 }
 
-
-.scene1-content{
+.scene-content1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  .hand_shake{
+  background: url('../images/scene1.png');
+  .hand_shake {
     animation-duration: 5s;
   }
 }
 
+.scene-content2 {
+  background: url('../images/scene2.png');
+  background-size: cover;
+}
 
+.scene-content3 {
+  background: url('../images/scene3.png');
+  background-size: cover;
+}
 
+.scene-content4 {
+  background: url('../images/scene4.png');
+  background-size: cover;
+}
+
+.scene-content5 {
+  background: url('../images/scene5.png');
+  background-size: cover;
+}
+
+.scene-content6 {
+  background: url('../images/scene6.png');
+  background-size: cover;
+}
+
+.scene-content7 {
+  background: url('../images/scene7.png');
+  background-size: cover;
+}

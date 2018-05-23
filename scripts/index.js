@@ -3,6 +3,7 @@ $(function(){
   audio=$('#audio')[0];
   var height = document.documentElement.clientHeight;
   var width = document.documentElement.clientWidth;
+  // 旋转元素
   changeOrientation($('.body-container'));
   changeOrientation($('.swiper-slide-content'));
 
@@ -26,12 +27,13 @@ function gotoPart2(){
   // $('.body-container').remove();
   anime({
     targets: $('.body-container')[0],
-    opacity: .5,
+    opacity: [1,0],
     duration:3000,
     backgroundColor: '#fff',
     easing: 'easeInOutQuad',
     begin: function(anim) {
       $('#change-part')[0].play();
+      $('.circle').show();
     },
     complete: function(anim) {
       $('.body-container').remove();
