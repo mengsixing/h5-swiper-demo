@@ -43,12 +43,26 @@ function gotoPart2(){
         slidesPerView: 1,
         freeMode: true,
         on: {
-          touchMove(e) {
+          setTransition(e) {
             // console.log(e.touches[0].screenY);
+            var number=  Math.abs(swiper.translate)/window.innerHeight ;
+            var numberInt=Number.parseInt(number);
+            number=number-numberInt;
+            console.log(number);
+            console.log('打印',$('.big-img-2')[0].getBoundingClientRect());
+            if(number>0.3 && number<0.7 && numberInt<4){
+              $('.car').removeClass('fadeIn');
+              $('.car').addClass('animated fadeOut');
+            }else{
+              $('.car').removeClass('fadeOut');
+              $('.car').addClass('animated fadeIn');
+            }
           },
           slideNextTransitionStart(e) {
             console.log(this.activeIndex);
           },
+          slideNextTransitionEnd(){
+          }
         }
       });
       audio.play();
