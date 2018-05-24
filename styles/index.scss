@@ -4,10 +4,6 @@ body {
   height: 100%;
 }
 
-.slow-animate {
-  animation-duration: 5s;
-}
-
 /* 音乐旋转动画 */
 
 @keyframes keeproute {
@@ -19,7 +15,7 @@ body {
   }
 }
 
-/* 提示点击闪动 */
+/* 提示点闪动 */
 
 @keyframes fadein {
   0% {
@@ -49,134 +45,140 @@ body {
   right: 20px;
   top: 20px;
   z-index: 2;
-  background: url('../images/music_off.png');
-  background-size: cover;
+  background-image: url('../images/music_off.png');
+  background-size: contain;
   &.run {
     background-image: url('../images/music_on.png') !important;
     animation: keeproute 5s linear infinite;
   }
 }
 
-.big-img-1{
-  position: fixed;
-  z-index:3;
-  right: -28%;
-  bottom: 0;
-  width: 50%;
-  transform: translate3d(0,0,100);
+.background {
+  background-size: cover !important;
+  background-position: center !important;
 }
 
-.big-img-2{
-  position: fixed;
-  left: -28%;
-  bottom: 0;
-  width: 50%;
-}
-
-
-.circle{
-  display: none;
-  animation: keeproute 2s linear infinite;
-}
-
-.swiper-container {
-  width: 100%;
-  height: 100%;
-}
-
-.body-container {
+.part1 {
   position: absolute;
-  z-index: 9999;
+  z-index: 3;
   left: 0;
   top: 0;
   bottom: 0;
   right: 0;
+  .part1-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @extend .background;
+    background-image: url('../images/part1.png');
+    .circle {
+      display: none;
+      animation: keeproute 2s linear infinite;
+    }
+  }
+}
+
+.part2 {
+  height: 100%;
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .swiper-slide {
   position: relative;
   .swiper-slide-content {
     position: absolute;
-    background-size: cover;
+    background-size: contain;
+    .tip-icon {
+      width: 3%;
+      animation: fadein 2s linear infinite;
+    }
+    .scene-content-dialog {
+      display: none;
+      position: absolute;
+      left: 15%;
+      top: 0;
+      width: 25%;
+    }
+    .big-img-2 {
+      position: absolute;
+      left: -28%;
+      bottom: 0;
+      width: 50%;
+    }
+    .scene-content-name {
+      position: absolute;
+      right: 5%;
+      top: 5%;
+      width: 5%;
+    }
   }
-}
-
-.tip {
-  display: none;
-  position: absolute;
-  bottom: 10%;
-  left: 0;
-  right: 0;
-  text-align: center;
-  color: white;
-}
-
-.tip-icon {
-  animation: fadein 2s linear infinite;
-  &.hengshan{
-    position: absolute;
-    left: 50%;
-    bottom:60%;
+  .scene-content1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @extend .background;
+    background-image: url('../images/scene1.png');
+    .hand_shake {
+      width: 8%;
+      animation-duration: 5s;
+    }
+    .shiku {
+      position: absolute;
+      left: 50%;
+      bottom: 60%;
+    }
   }
-}
-
-.part1 {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: cover;
-  background-color: white;
-  background-image: url('../images/scene5.png');
-}
-
-
-
-.part2 {
-  height: 100%;
-}
-
-.scene-content1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url('../images/scene1.png');
-  .hand_shake {
-    animation-duration: 5s;
+  .scene-content2 {
+    background-image: url('../images/scene2.png');
+    @extend .background;
+    .xuankongshi {
+      position: absolute;
+      left: 50%;
+      bottom: 60%;
+    }
   }
-}
-
-.scene-content2 {
-  background: url('../images/scene2.png');
-  background-size: cover;
-}
-
-.scene-content3 {
-  background: url('../images/scene3.png');
-  background-size: cover;
-}
-
-.scene-content4 {
-  background: url('../images/scene4.png');
-  background-size: cover;
-}
-
-.scene-content5 {
-  background: url('../images/scene5.png');
-  background-size: cover;
-}
-
-.scene-content6 {
-  background: url('../images/scene6.png');
-  background-size: cover;
-}
-
-.scene-content7 {
-  background: url('../images/scene7.png');
-  background-size: cover;
+  .scene-content3 {
+    background-image: url('../images/scene3.png');
+    @extend .background;
+    .jiulongbi {
+      position: absolute;
+      left: 50%;
+      bottom: 60%;
+    }
+  }
+  .scene-content4 {
+    background-image: url('../images/scene4.png');
+    @extend .background;
+    .hengshan {
+      position: absolute;
+      left: 50%;
+      bottom: 60%;
+    }
+  }
+  .scene-content5 {
+    background-image: url('../images/scene5.png');
+    @extend .background;
+    .meishi {
+      position: absolute;
+      left: 50%;
+      bottom: 60%;
+    }
+  }
+  .scene-content6 {
+    background-image: url('../images/scene6.png');
+    @extend .background;
+    .gucheng {
+      position: absolute;
+      left: 50%;
+      bottom: 60%;
+    }
+  }
 }

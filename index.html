@@ -3,9 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>漫步云中、自在大同</title>
+  <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.bootcss.com/normalize/8.0.0/normalize.min.css" rel="stylesheet">
   <link href="https://cdn.bootcss.com/Swiper/4.2.6/css/swiper.min.css" rel="stylesheet">
   <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
@@ -13,56 +14,72 @@
 </head>
 
 <body>
-  <audio id="audio" src="./audios/music.mp3" preload="auto"></audio>
-  <audio id="change-part" src="./audios/change.mp3" preload="auto"></audio>
-  <div class="body-container">
-    <section class="part1" onclick="gotoPart2()">
-      <h3 class="xxx">点击进入回忆</h3>
+  <audio id="audio" src="./audios/music.mp3" preload="preload"></audio>
+  <audio id="change-part" src="./audios/change.mp3" preload="preload"></audio>
+  <div class="part1">
+    <section class="part1-container">
       <img class="circle" src="./images/circle.png" alt="旋转">
     </section>
   </div>
 
+  <img class="car" src="./images/car.png" alt="汽车">
   <div class="music-icon"></div>
 
   <section class="part2">
     <div class="swiper-container">
-  <img class="car" src="./images/car.png" alt="汽车">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-            
-            <div class="swiper-slide-content scene-content1">
-                <img src="./images/hand.png" alt="向左滑动" />
-                <img class="animated infinite shake hand_shake" src="./images/hand1.png" alt="向左滑动" />
-            </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="swiper-slide-content scene-content2">
-            <img class="big-img-2" src="./images/兔头.png" alt="兔头" />
-            <img class="tip-icon hengshan" src="./images/dian.png" alt="点"  onclick="showTip()">
-            <p class="tip">
-              恒山（悬空寺）——飞梁为基，青云化壁
-            </p>
+          <div class="swiper-slide-content scene-content1">
+            <img class="hand" src="./images/hand.png" alt="向左滑动" />
+            <img class="animated infinite shake hand_shake hand" src="./images/hand1.png" alt="向左滑动" />
+            <img class="tip-icon shiku" src="./images/dian.png" alt="点">
+            <img class="scene-content-dialog" src="./images/scene1-shiku.png" alt="云冈石窟" />
+            <img class="scene-content-name" src="./images/scene1-name.png" alt="云冈石窟" />
           </div>
         </div>
         <div class="swiper-slide">
-            <div class="swiper-slide-content  scene-content3">
-                <img class="big-img-2" src="./images/刀削面.png" alt="刀削面" />
-            </div>
+          <div class="swiper-slide-content scene-content2">
+            <img class="big-img-2" src="./images/tutou.png" alt="兔头" />
+            <img class="tip-icon xuankongshi" src="./images/dian.png" alt="点">
+            <img class="scene-content-dialog" src="./images/scene2-xuankongshi.png" alt="悬空寺" />
+            <img class="scene-content-name" src="./images/scene2-name.png" alt="悬空寺" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-slide-content  scene-content3">
+            <img class="big-img-2" src="./images/daoxuemian.png" alt="刀削面" />
+            <img class="tip-icon jiulongbi" src="./images/dian.png" alt="点">
+            <img class="scene-content-dialog" src="./images/scene3-jiulongbi.png" alt="九龙壁" />
+            <img class="scene-content-name" src="./images/scene3-name.png" alt="九龙壁" />
+          </div>
         </div>
         <div class="swiper-slide">
           <div class="swiper-slide-content scene-content4">
-            <img class="big-img-2" src="./images/包子.png" alt="包子" />
+            <img class="big-img-2" src="./images/baozi.png" alt="包子" />
+            <img class="tip-icon hengshan" src="./images/dian.png" alt="点">
+            <img class="scene-content-dialog" src="./images/scene4-hengshan.png" alt="恒山" />
+            <img class="scene-content-name" src="./images/scene4-name.png" alt="恒山" />
+          </div>
         </div>
-      </div>
-        <div class="swiper-slide"><div class="swiper-slide-content scene-content5">
-            <img class="big-img-2" src="./images/烧麦.png" alt="烧麦" />
-        </div></div>
-        <div class="swiper-slide"><div class="swiper-slide-content scene-content6"></div></div>
+        <div class="swiper-slide">
+          <div class="swiper-slide-content scene-content5">
+            <img class="big-img-2" src="./images/shaomai.png" alt="烧麦" />
+            <img class="tip-icon meishi" src="./images/dian.png" alt="点">
+            <img class="scene-content-dialog" src="./images/scene5-meishi.png" alt="大同美食" />
+            <img class="scene-content-name" src="./images/scene5-name.png" alt="大同美食" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-slide-content scene-content6">
+            <img class="tip-icon gucheng" src="./images/dian.png" alt="点">
+            <img class="scene-content-dialog" src="./images/scene6-gucheng.png" alt="大同古城" />
+            <img class="scene-content-name" src="./images/scene6-name.png" alt="大同古城" />
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Swiper JS -->
   <script src="https://cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
   <script src="https://cdn.bootcss.com/Swiper/4.2.6/js/swiper.min.js"></script>
   <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>

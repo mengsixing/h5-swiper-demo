@@ -4,10 +4,6 @@ body {
   position: relative;
   height: 100%; }
 
-.slow-animate {
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s; }
-
 /* 音乐旋转动画 */
 @-webkit-keyframes keeproute {
   from {
@@ -24,7 +20,7 @@ body {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg); } }
 
-/* 提示点击闪动 */
+/* 提示点闪动 */
 @-webkit-keyframes fadein {
   0% {
     opacity: 0; }
@@ -56,114 +52,110 @@ body {
   right: 20px;
   top: 20px;
   z-index: 2;
-  background: url("../images/music_off.png");
-  background-size: cover; }
+  background-image: url("../images/music_off.png");
+  background-size: contain; }
   .music-icon.run {
     background-image: url("../images/music_on.png") !important;
     -webkit-animation: keeproute 5s linear infinite;
             animation: keeproute 5s linear infinite; }
 
-.big-img-1 {
-  position: fixed;
-  z-index: 3;
-  right: -28%;
-  bottom: 0;
-  width: 50%;
-  -webkit-transform: translate3d(0, 0, 100);
-          transform: translate3d(0, 0, 100); }
+.background, .part1 .part1-container, .swiper-slide .scene-content1, .swiper-slide .scene-content2, .swiper-slide .scene-content3, .swiper-slide .scene-content4, .swiper-slide .scene-content5, .swiper-slide .scene-content6 {
+  background-size: cover !important;
+  background-position: center !important; }
 
-.big-img-2 {
-  position: fixed;
-  left: -28%;
-  bottom: 0;
-  width: 50%; }
-
-.circle {
-  display: none;
-  -webkit-animation: keeproute 2s linear infinite;
-          animation: keeproute 2s linear infinite; }
-
-.swiper-container {
-  width: 100%;
-  height: 100%; }
-
-.body-container {
+.part1 {
   position: absolute;
-  z-index: 9999;
+  z-index: 3;
   left: 0;
   top: 0;
   bottom: 0;
   right: 0; }
+  .part1 .part1-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/part1.png"); }
+    .part1 .part1-container .circle {
+      display: none;
+      -webkit-animation: keeproute 2s linear infinite;
+              animation: keeproute 2s linear infinite; }
+
+.part2 {
+  height: 100%; }
+  .part2 .swiper-container {
+    width: 100%;
+    height: 100%; }
 
 .swiper-slide {
   position: relative; }
   .swiper-slide .swiper-slide-content {
     position: absolute;
-    background-size: cover; }
-
-.tip {
-  display: none;
-  position: absolute;
-  bottom: 10%;
-  left: 0;
-  right: 0;
-  text-align: center;
-  color: white; }
-
-.tip-icon {
-  -webkit-animation: fadein 2s linear infinite;
-          animation: fadein 2s linear infinite; }
-  .tip-icon.hengshan {
-    position: absolute;
-    left: 50%;
-    bottom: 60%; }
-
-.part1 {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: cover;
-  background-color: white;
-  background-image: url("../images/scene5.png"); }
-
-.part2 {
-  height: 100%; }
-
-.scene-content1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url("../images/scene1.png"); }
-  .scene-content1 .hand_shake {
-    -webkit-animation-duration: 5s;
-            animation-duration: 5s; }
-
-.scene-content2 {
-  background: url("../images/scene2.png");
-  background-size: cover; }
-
-.scene-content3 {
-  background: url("../images/scene3.png");
-  background-size: cover; }
-
-.scene-content4 {
-  background: url("../images/scene4.png");
-  background-size: cover; }
-
-.scene-content5 {
-  background: url("../images/scene5.png");
-  background-size: cover; }
-
-.scene-content6 {
-  background: url("../images/scene6.png");
-  background-size: cover; }
-
-.scene-content7 {
-  background: url("../images/scene7.png");
-  background-size: cover; }
+    background-size: contain; }
+    .swiper-slide .swiper-slide-content .tip-icon {
+      width: 3%;
+      -webkit-animation: fadein 2s linear infinite;
+              animation: fadein 2s linear infinite; }
+    .swiper-slide .swiper-slide-content .scene-content-dialog {
+      display: none;
+      position: absolute;
+      left: 15%;
+      top: 0;
+      width: 25%; }
+    .swiper-slide .swiper-slide-content .big-img-2 {
+      position: absolute;
+      left: -28%;
+      bottom: 0;
+      width: 50%; }
+    .swiper-slide .swiper-slide-content .scene-content-name {
+      position: absolute;
+      right: 5%;
+      top: 5%;
+      width: 5%; }
+  .swiper-slide .scene-content1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/scene1.png"); }
+    .swiper-slide .scene-content1 .hand_shake {
+      width: 8%;
+      -webkit-animation-duration: 5s;
+              animation-duration: 5s; }
+    .swiper-slide .scene-content1 .shiku {
+      position: absolute;
+      left: 50%;
+      bottom: 60%; }
+  .swiper-slide .scene-content2 {
+    background-image: url("../images/scene2.png"); }
+    .swiper-slide .scene-content2 .xuankongshi {
+      position: absolute;
+      left: 50%;
+      bottom: 60%; }
+  .swiper-slide .scene-content3 {
+    background-image: url("../images/scene3.png"); }
+    .swiper-slide .scene-content3 .jiulongbi {
+      position: absolute;
+      left: 50%;
+      bottom: 60%; }
+  .swiper-slide .scene-content4 {
+    background-image: url("../images/scene4.png"); }
+    .swiper-slide .scene-content4 .hengshan {
+      position: absolute;
+      left: 50%;
+      bottom: 60%; }
+  .swiper-slide .scene-content5 {
+    background-image: url("../images/scene5.png"); }
+    .swiper-slide .scene-content5 .meishi {
+      position: absolute;
+      left: 50%;
+      bottom: 60%; }
+  .swiper-slide .scene-content6 {
+    background-image: url("../images/scene6.png"); }
+    .swiper-slide .scene-content6 .gucheng {
+      position: absolute;
+      left: 50%;
+      bottom: 60%; }
