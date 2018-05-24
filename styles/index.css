@@ -114,7 +114,7 @@ body {
     .swiper-slide .swiper-slide-content .scene-content-name {
       position: absolute;
       right: 5%;
-      top: 5%;
+      top: 15%;
       width: 5%; }
   .swiper-slide .scene-content1 {
     display: flex;
