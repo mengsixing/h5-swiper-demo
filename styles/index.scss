@@ -32,10 +32,11 @@ body {
 .car {
   position: fixed;
   left: 18%;
-  top: 200px;
+  top: 10px;
   z-index: 2;
   width: 120px;
-  transform: rotateZ(90deg)
+  transform: rotateZ(90deg);
+  transition: top 1s;
 }
 
 .music-icon {
@@ -119,6 +120,18 @@ body {
       top: 15%;
       width: 5%;
     }
+    .scene-content-clould{
+      position: absolute;
+      top: 10%;
+      left: 35%;
+      animation-duration: 15s;
+      img{
+        width: 7%;
+        &:nth-child(2){
+          margin-bottom: 20px;
+        }
+      }
+    }
   }
   .scene-content1 {
     display: flex;
@@ -155,7 +168,7 @@ body {
     }
     .scene-content-name{
       right: 8%;
-      left: 4%;
+      top: 4%;
     }
   }
   .scene-content4 {

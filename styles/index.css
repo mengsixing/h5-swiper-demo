@@ -39,11 +39,12 @@ body {
 .car {
   position: fixed;
   left: 18%;
-  top: 200px;
+  top: 10px;
   z-index: 2;
   width: 120px;
   -webkit-transform: rotateZ(90deg);
-          transform: rotateZ(90deg); }
+          transform: rotateZ(90deg);
+  transition: top 1s; }
 
 .music-icon {
   position: fixed;
@@ -116,6 +117,16 @@ body {
       right: 25%;
       top: 15%;
       width: 5%; }
+    .swiper-slide .swiper-slide-content .scene-content-clould {
+      position: absolute;
+      top: 10%;
+      left: 35%;
+      -webkit-animation-duration: 15s;
+              animation-duration: 15s; }
+      .swiper-slide .swiper-slide-content .scene-content-clould img {
+        width: 7%; }
+        .swiper-slide .swiper-slide-content .scene-content-clould img:nth-child(2) {
+          margin-bottom: 20px; }
   .swiper-slide .scene-content1 {
     display: flex;
     justify-content: center;
@@ -143,7 +154,7 @@ body {
       bottom: 60%; }
     .swiper-slide .scene-content3 .scene-content-name {
       right: 8%;
-      left: 4%; }
+      top: 4%; }
   .swiper-slide .scene-content4 {
     background-image: url("../images/scene4.png"); }
     .swiper-slide .scene-content4 .hengshan {
