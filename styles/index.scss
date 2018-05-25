@@ -115,7 +115,7 @@ body {
     }
     .scene-content-name {
       position: absolute;
-      right: 5%;
+      right: 25%;
       top: 15%;
       width: 5%;
     }
@@ -153,6 +153,10 @@ body {
       left: 50%;
       bottom: 60%;
     }
+    .scene-content-name{
+      right: 8%;
+      left: 4%;
+    }
   }
   .scene-content4 {
     background-image: url('../images/scene4.png');
@@ -161,6 +165,9 @@ body {
       position: absolute;
       left: 50%;
       bottom: 60%;
+    }
+    .scene-content-name{
+      right: 10%;
     }
   }
   .scene-content5 {
@@ -171,6 +178,9 @@ body {
       left: 50%;
       bottom: 60%;
     }
+    .scene-content-name{
+      right: 10%;
+    }
   }
   .scene-content6 {
     background-image: url('../images/scene6.png');
@@ -179,6 +189,9 @@ body {
       position: absolute;
       left: 50%;
       bottom: 60%;
+    }
+    .scene-content-name{
+      right: 10%;
     }
   }
 }

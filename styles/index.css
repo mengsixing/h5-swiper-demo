@@ -113,7 +113,7 @@ body {
       width: 50%; }
     .swiper-slide .swiper-slide-content .scene-content-name {
       position: absolute;
-      right: 5%;
+      right: 25%;
       top: 15%;
       width: 5%; }
   .swiper-slide .scene-content1 {
@@ -141,21 +141,30 @@ body {
       position: absolute;
       left: 50%;
       bottom: 60%; }
+    .swiper-slide .scene-content3 .scene-content-name {
+      right: 8%;
+      left: 4%; }
   .swiper-slide .scene-content4 {
     background-image: url("../images/scene4.png"); }
     .swiper-slide .scene-content4 .hengshan {
       position: absolute;
       left: 50%;
       bottom: 60%; }
+    .swiper-slide .scene-content4 .scene-content-name {
+      right: 10%; }
   .swiper-slide .scene-content5 {
     background-image: url("../images/scene5.png"); }
     .swiper-slide .scene-content5 .meishi {
       position: absolute;
       left: 50%;
       bottom: 60%; }
+    .swiper-slide .scene-content5 .scene-content-name {
+      right: 10%; }
   .swiper-slide .scene-content6 {
     background-image: url("../images/scene6.png"); }
     .swiper-slide .scene-content6 .gucheng {
       position: absolute;
       left: 50%;
       bottom: 60%; }
+    .swiper-slide .scene-content6 .scene-content-name {
+      right: 10%; }
