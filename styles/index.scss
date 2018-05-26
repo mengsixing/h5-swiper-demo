@@ -4,6 +4,14 @@ body {
   height: 100%;
 }
 
+
+/*横屏 css*/
+@media screen and (orientation: landscape) {
+  .car {
+    transform: rotateZ(0deg) !important;
+  }
+}
+
 /* 音乐旋转动画 */
 
 @keyframes keeproute {
@@ -36,7 +44,7 @@ body {
   z-index: 2;
   width: 120px;
   transform: rotateZ(90deg);
-  transition: top .2s;
+  transition: top 10s;
 }
 
 .music-icon {

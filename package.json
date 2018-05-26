@@ -4,8 +4,7 @@
   "description": "h5-swiper-demo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "gulp -watch"
+    "start": "gulp -watch"
   },
   "repository": {
     "type": "git",
@@ -22,7 +21,7 @@
     "gulp": "^3.9.1",
     "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.2.3",
-    "gulp-sass": "^4.0.1",
+    "gulp-sass": "^4.0.1"
   },
   "dependencies": {
     "serve": "^6.5.8"

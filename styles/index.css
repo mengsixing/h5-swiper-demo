@@ -4,6 +4,12 @@ body {
   position: relative;
   height: 100%; }
 
+/*横屏 css*/
+@media screen and (orientation: landscape) {
+  .car {
+    -webkit-transform: rotateZ(0deg) !important;
+            transform: rotateZ(0deg) !important; } }
+
 /* 音乐旋转动画 */
 @-webkit-keyframes keeproute {
   from {
@@ -44,7 +50,7 @@ body {
   width: 120px;
   -webkit-transform: rotateZ(90deg);
           transform: rotateZ(90deg);
-  transition: top .2s; }
+  transition: top 10s; }
 
 .music-icon {
   position: fixed;
