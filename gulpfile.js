@@ -1,8 +1,14 @@
 var gulp = require('gulp');
+var serve = require('serve');
 
 gulp.task('default',['autoprefixer','copyDir'], function () {
     console.log('编译完毕，开始监听变化...');
-    gulp.watch('./styles/*.scss', ['autoprefixer']);
+    gulp.watch(['./styles/*.scss'], ['autoprefixer','copyDir']);
+    gulp.watch(['index.html','./scripts/*.js'], ['copyDir']);
+    const server = serve(__dirname+'/dist', {
+        port: 8088,
+        ignore: ['node_modules']
+      });
 });
 
 gulp.task('autoprefixer', function () {
@@ -16,6 +22,6 @@ gulp.task('autoprefixer', function () {
 });
 
 gulp.task('copyDir', function () {
-    return gulp.src(['./images/*','./audios/*','./styles/*.css','./scripts/*','index.html'],{base: '.'})
+    return gulp.src(['./styles/*.css','./scripts/index.js','index.html'])
         .pipe(gulp.dest('./dist'));
 });

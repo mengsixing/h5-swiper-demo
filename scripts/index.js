@@ -7,6 +7,11 @@ $(function () {
   changeOrientation($('.part1'));
   changeOrientation($('.swiper-slide-content'));
 
+  // 播放完
+  audio.onended=function(){
+    $('.music-icon').removeClass('run');
+  }
+
   // 点击播放
   $('.music-icon').click(function () {
     if (audio.paused) {
@@ -32,7 +37,6 @@ $(function () {
       backgroundColor: '#fff',
       easing: 'easeInOutQuad',
       begin: function (anim) {
-        $('#change-part')[0].play();
         $('.circle').show();
       },
       complete: function (anim) {
@@ -49,31 +53,26 @@ $(function () {
                 hand.remove();
               }
             },
-            setTransition(e) {
-              // console.log(e.touches[0].screenY);
-              var translateAbs=Math.abs(swiper.translate);
-              var number = translateAbs / window.innerHeight;
-              console.log();
-              $('.car').css('top',translateAbs/6 + 'px')
-              var numberInt = Number.parseInt(number);
-              number = number - numberInt;
-              if (number > 0.3 && number < 0.7 && numberInt < 4) {
-                $('.car').removeClass('fadeIn');
-                $('.car').addClass('animated fadeOut');
-              } else {
-                $('.car').removeClass('fadeOut');
-                $('.car').addClass('animated fadeIn');
+            progress(e) {
+              var progress= e;
+              $('.car').css('top',progress*(window.innerHeight-120) + 'px')
+              if( (progress>0.1 && progress< 0.16) ||(progress>0.28 && progress< 0.35) || (progress>0.49 && progress< 0.52) || (progress>0.62 && progress< 0.69)  ){
+                  $('.car').removeClass('fadeIn');
+                  $('.car').addClass('animated fadeOut');
+              }else{
+                if($('.car').hasClass('fadeOut')){
+                  $('.car').removeClass('fadeOut');
+                  $('.car').addClass('animated fadeIn');
+                }
               }
             },
-            slideNextTransitionStart(e) {
-              console.log(this.activeIndex);
-            },
-            slideNextTransitionEnd() {}
           }
         });
-        audio.play();
+        
         $('.music-icon').addClass('run');
       }
     });
+    $('#change-part')[0].play();
+    audio.play();
   });
 });
