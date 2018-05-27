@@ -25,7 +25,13 @@ $(function () {
 
   // 点击tip
   $('.tip-icon').click(function () {
-    $(this).parent().find('.scene-content-dialog').show().addClass('animated fadeIn');
+    var dialog=$(this).parent().find('.scene-content-dialog');
+    if(dialog.css('display')==='none'){
+      dialog.show().addClass('animated fadeIn');
+    }else{
+      dialog.hide();
+    }
+    
   });
 
   // 进入part2

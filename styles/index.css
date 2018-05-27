@@ -50,7 +50,7 @@ body {
   width: 120px;
   -webkit-transform: rotateZ(90deg);
           transform: rotateZ(90deg);
-  transition: top 10s; }
+  transition: top 5s; }
 
 .music-icon {
   position: fixed;
@@ -133,6 +133,14 @@ body {
         width: 7%; }
         .swiper-slide .swiper-slide-content .scene-content-clould img:nth-child(2) {
           margin-bottom: 20px; }
+    .swiper-slide .swiper-slide-content .scene-content-text {
+      position: absolute;
+      font-size: 12px;
+      color: white;
+      bottom: 15%;
+      left: 0;
+      right: 0;
+      text-align: center; }
   .swiper-slide .scene-content1 {
     display: flex;
     justify-content: center;
@@ -146,6 +154,9 @@ body {
       position: absolute;
       left: 50%;
       bottom: 60%; }
+    .swiper-slide .scene-content1 .scene-content-text {
+      left: 15%;
+      text-align: left; }
   .swiper-slide .scene-content2 {
     background-image: url("http://p97lek8up.bkt.clouddn.com/scene2.png"); }
     .swiper-slide .scene-content2 .xuankongshi {
@@ -159,7 +170,7 @@ body {
       left: 65%;
       bottom: 70%; }
     .swiper-slide .scene-content3 .scene-content-name {
-      right: 8%;
+      right: 45%;
       top: 4%; }
   .swiper-slide .scene-content4 {
     background-image: url("http://p97lek8up.bkt.clouddn.com/scene4.png"); }
@@ -168,7 +179,8 @@ body {
       left: 65%;
       bottom: 70%; }
     .swiper-slide .scene-content4 .scene-content-name {
-      right: 10%; }
+      right: 45%;
+      top: 4%; }
   .swiper-slide .scene-content5 {
     background-image: url("http://p97lek8up.bkt.clouddn.com/scene5.png"); }
     .swiper-slide .scene-content5 .meishi {
@@ -176,7 +188,7 @@ body {
       left: 70%;
       bottom: 60%; }
     .swiper-slide .scene-content5 .scene-content-name {
-      right: 10%; }
+      right: 45%; }
   .swiper-slide .scene-content6 {
     background-image: url("http://p97lek8up.bkt.clouddn.com/scene6.png"); }
     .swiper-slide .scene-content6 .gucheng {
