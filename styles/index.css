@@ -13,18 +13,38 @@ body {
 /* 音乐旋转动画 */
 @-webkit-keyframes keeproute {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
+    -webkit-transform: rotate(0deg) rotateZ(90deg);
+            transform: rotate(0deg) rotateZ(90deg); }
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg); } }
+    -webkit-transform: rotate(360deg) rotateZ(90deg);
+            transform: rotate(360deg) rotateZ(90deg); } }
 @keyframes keeproute {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
+    -webkit-transform: rotate(0deg) rotateZ(90deg);
+            transform: rotate(0deg) rotateZ(90deg); }
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg); } }
+    -webkit-transform: rotate(360deg) rotateZ(90deg);
+            transform: rotate(360deg) rotateZ(90deg); } }
+
+@-webkit-keyframes rendown {
+  from {
+    -webkit-transform: translate(0vw);
+            transform: translate(0vw);
+    opacity: 1; }
+  to {
+    -webkit-transform: translate(-70vw);
+            transform: translate(-70vw);
+    opacity: 0; } }
+
+@keyframes rendown {
+  from {
+    -webkit-transform: translate(0vw);
+            transform: translate(0vw);
+    opacity: 1; }
+  to {
+    -webkit-transform: translate(-70vw);
+            transform: translate(-70vw);
+    opacity: 0; } }
 
 /* 提示点闪动 */
 @-webkit-keyframes fadein {
@@ -44,13 +64,23 @@ body {
 
 .car {
   position: fixed;
-  left: 18%;
+  left: 10%;
   top: 10px;
   z-index: 2;
   width: 120px;
   -webkit-transform: rotateZ(90deg);
           transform: rotateZ(90deg);
-  transition: top 5s; }
+  transition: top 2s; }
+
+.ren {
+  position: fixed;
+  right: -60px;
+  top: 20px;
+  z-index: 2;
+  width: 50px; }
+  .ren.run {
+    -webkit-animation: rendown 3s linear;
+            animation: rendown 3s linear; }
 
 .music-icon {
   position: fixed;
@@ -66,7 +96,7 @@ body {
     -webkit-animation: keeproute 5s linear infinite;
             animation: keeproute 5s linear infinite; }
 
-.background, .part1 .part1-container, .swiper-slide .scene-content1, .swiper-slide .scene-content2, .swiper-slide .scene-content3, .swiper-slide .scene-content4, .swiper-slide .scene-content5, .swiper-slide .scene-content6 {
+.background, .part1 .part1-container, .swiper-slide .scene-content1, .swiper-slide .scene-content2, .swiper-slide .scene-content3, .swiper-slide .scene-content4, .swiper-slide .scene-content5, .swiper-slide .scene-content6, .scene-content1-2, .scene-content2-3, .scene-content3-4, .scene-content4-5, .scene-content5-6 {
   background-size: cover !important;
   background-position: center !important; }
 
@@ -140,12 +170,14 @@ body {
       bottom: 15%;
       left: 0;
       right: 0;
-      text-align: center; }
+      text-align: center;
+      display: none;
+      transition: 5s; }
   .swiper-slide .scene-content1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("http://p97lek8up.bkt.clouddn.com/scene1.png"); }
+    background-image: url("http://p97lek8up.bkt.clouddn.com/n-scene1.png"); }
     .swiper-slide .scene-content1 .hand_shake {
       width: 8%;
       -webkit-animation-duration: 5s;
@@ -158,13 +190,13 @@ body {
       left: 15%;
       text-align: left; }
   .swiper-slide .scene-content2 {
-    background-image: url("http://p97lek8up.bkt.clouddn.com/scene2.png"); }
+    background-image: url("http://p97lek8up.bkt.clouddn.com/n-scene2.png"); }
     .swiper-slide .scene-content2 .xuankongshi {
       position: absolute;
       left: 50%;
       bottom: 75%; }
   .swiper-slide .scene-content3 {
-    background-image: url("http://p97lek8up.bkt.clouddn.com/scene3.png"); }
+    background-image: url("http://p97lek8up.bkt.clouddn.com/n-scene3.png"); }
     .swiper-slide .scene-content3 .jiulongbi {
       position: absolute;
       left: 65%;
@@ -173,7 +205,7 @@ body {
       right: 45%;
       top: 4%; }
   .swiper-slide .scene-content4 {
-    background-image: url("http://p97lek8up.bkt.clouddn.com/scene4.png"); }
+    background-image: url("http://p97lek8up.bkt.clouddn.com/n-scene4.png"); }
     .swiper-slide .scene-content4 .hengshan {
       position: absolute;
       left: 65%;
@@ -182,7 +214,7 @@ body {
       right: 45%;
       top: 4%; }
   .swiper-slide .scene-content5 {
-    background-image: url("http://p97lek8up.bkt.clouddn.com/scene5.png"); }
+    background-image: url("http://p97lek8up.bkt.clouddn.com/n-scene5.png"); }
     .swiper-slide .scene-content5 .meishi {
       position: absolute;
       left: 70%;
@@ -190,10 +222,25 @@ body {
     .swiper-slide .scene-content5 .scene-content-name {
       right: 45%; }
   .swiper-slide .scene-content6 {
-    background-image: url("http://p97lek8up.bkt.clouddn.com/scene6.png"); }
+    background-image: url("http://p97lek8up.bkt.clouddn.com/n-scene6.png"); }
     .swiper-slide .scene-content6 .gucheng {
       position: absolute;
       left: 50%;
       bottom: 60%; }
     .swiper-slide .scene-content6 .scene-content-name {
       right: 10%; }
+
+.scene-content1-2 {
+  background-image: url("http://p97lek8up.bkt.clouddn.com/1-2.png"); }
+
+.scene-content2-3 {
+  background-image: url("http://p97lek8up.bkt.clouddn.com/2-3.png"); }
+
+.scene-content3-4 {
+  background-image: url("http://p97lek8up.bkt.clouddn.com/3-4.png"); }
+
+.scene-content4-5 {
+  background-image: url("http://p97lek8up.bkt.clouddn.com/4-5.png"); }
+
+.scene-content5-6 {
+  background-image: url("http://p97lek8up.bkt.clouddn.com/5-6.png"); }

@@ -50,8 +50,8 @@ $(function () {
         $('.part2').show();
         var swiper = new Swiper('.swiper-container', {
           direction: 'vertical',
-          slidesPerView: 1,
-          freeMode: true,
+          // slidesPerView: 1,
+          // freeMode: true,
           on: {
             touchStart() {
               var hand = $('.hand');
@@ -61,8 +61,28 @@ $(function () {
             },
             progress(e) {
               var progress= e;
-              $('.car').css('top',progress*(window.innerHeight-120) + 'px')
-              if( (progress>0.1 && progress< 0.16) ||(progress>0.28 && progress< 0.35) || (progress>0.49 && progress< 0.52) || (progress>0.62 && progress< 0.69)  ){
+              console.log(progress);
+              $('.car').css('top',progress*(window.innerHeight-120) + 'px');
+              var contentText=$('.scene-content-text');
+              if(progress>=0.01){
+                contentText.eq(0).show().addClass('animated fadeIn');
+              }
+              if(progress>=0.2){
+                contentText.eq(1).show().addClass('animated fadeIn');
+              }
+              if(progress>=0.35){
+                contentText.eq(2).show().addClass('animated fadeIn');
+              }
+              if(progress>=0.53){
+                contentText.eq(3).show().addClass('animated fadeIn');
+              }
+              if(progress>=0.7){
+                contentText.eq(4).show().addClass('animated fadeIn');
+              }
+              if(progress>=0.88){
+                contentText.eq(5).show().addClass('animated fadeIn');
+              }
+              if( (progress>=0.1 && progress< 0.2) ||(progress>=0.3 && progress< 0.4) || (progress>=0.5 && progress< 0.6) || (progress>=0.7 && progress<= 0.8) ){
                   $('.car').removeClass('fadeIn');
                   $('.car').addClass('animated fadeOut');
               }else{
@@ -76,6 +96,7 @@ $(function () {
         });
         
         $('.music-icon').addClass('run');
+        $('.ren').addClass('run');
       }
     });
     $('#change-part')[0].play();

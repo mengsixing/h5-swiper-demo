@@ -16,10 +16,21 @@ body {
 
 @keyframes keeproute {
   from {
-    transform: rotate(0deg)
+    transform: rotate(0deg) rotateZ(90deg);
   }
   to {
-    transform: rotate(360deg)
+    transform: rotate(360deg) rotateZ(90deg);
+  }
+}
+
+@keyframes rendown {
+  from {
+    transform: translate(0vw);
+    opacity: 1;
+  }
+  to {
+    transform: translate(-70vw);
+    opacity: 0;
   }
 }
 
@@ -39,12 +50,23 @@ body {
 
 .car {
   position: fixed;
-  left: 18%;
+  left: 10%;
   top: 10px;
   z-index: 2;
   width: 120px;
   transform: rotateZ(90deg);
-  transition: top 5s;
+  transition: top 2s;
+}
+
+.ren{
+  position: fixed;
+  right: -60px;
+  top: 20px;
+  z-index: 2;
+  width: 50px;
+  &.run{
+    animation: rendown 3s linear;
+  }
 }
 
 .music-icon {
@@ -148,6 +170,8 @@ body {
       left: 0;
       right: 0;
       text-align: center;
+      display: none;
+      transition: 5s;
     }
   }
   .scene-content1 {
@@ -155,7 +179,7 @@ body {
     justify-content: center;
     align-items: center;
     @extend .background;
-    background-image: url('http://p97lek8up.bkt.clouddn.com/scene1.png');
+    background-image: url('http://p97lek8up.bkt.clouddn.com/n-scene1.png');
     .hand_shake {
       width: 8%;
       animation-duration: 5s;
@@ -170,8 +194,9 @@ body {
       text-align: left;
     }
   }
+  
   .scene-content2 {
-    background-image: url('http://p97lek8up.bkt.clouddn.com/scene2.png');
+    background-image: url('http://p97lek8up.bkt.clouddn.com/n-scene2.png');
     @extend .background;
     .xuankongshi {
       position: absolute;
@@ -180,7 +205,7 @@ body {
     }
   }
   .scene-content3 {
-    background-image: url('http://p97lek8up.bkt.clouddn.com/scene3.png');
+    background-image: url('http://p97lek8up.bkt.clouddn.com/n-scene3.png');
     @extend .background;
     .jiulongbi {
       position: absolute;
@@ -193,7 +218,7 @@ body {
     }
   }
   .scene-content4 {
-    background-image: url('http://p97lek8up.bkt.clouddn.com/scene4.png');
+    background-image: url('http://p97lek8up.bkt.clouddn.com/n-scene4.png');
     @extend .background;
     .hengshan {
       position: absolute;
@@ -206,7 +231,7 @@ body {
     }
   }
   .scene-content5 {
-    background-image: url('http://p97lek8up.bkt.clouddn.com/scene5.png');
+    background-image: url('http://p97lek8up.bkt.clouddn.com/n-scene5.png');
     @extend .background;
     .meishi {
       position: absolute;
@@ -218,7 +243,7 @@ body {
     }
   }
   .scene-content6 {
-    background-image: url('http://p97lek8up.bkt.clouddn.com/scene6.png');
+    background-image: url('http://p97lek8up.bkt.clouddn.com/n-scene6.png');
     @extend .background;
     .gucheng {
       position: absolute;
@@ -229,4 +254,25 @@ body {
       right: 10%;
     }
   }
+}
+
+.scene-content1-2 {
+  @extend .background;
+  background-image: url('http://p97lek8up.bkt.clouddn.com/1-2.png');
+}
+.scene-content2-3 {
+  @extend .background;
+  background-image: url('http://p97lek8up.bkt.clouddn.com/2-3.png');
+}
+.scene-content3-4 {
+  @extend .background;
+  background-image: url('http://p97lek8up.bkt.clouddn.com/3-4.png');
+}
+.scene-content4-5 {
+  @extend .background;
+  background-image: url('http://p97lek8up.bkt.clouddn.com/4-5.png');
+}
+.scene-content5-6 {
+  @extend .background;
+  background-image: url('http://p97lek8up.bkt.clouddn.com/5-6.png');
 }

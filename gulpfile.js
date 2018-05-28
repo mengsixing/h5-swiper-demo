@@ -4,7 +4,9 @@ var serve = require('serve');
 gulp.task('default',['autoprefixer','copyDir'], function () {
     console.log('编译完毕，开始监听变化...');
     gulp.watch(['./styles/*.scss'], ['autoprefixer','copyDir']);
-    gulp.watch(['index.html','./scripts/*.js'], ['copyDir']);
+    gulp.watch(['index.html','./scripts/*.js'], ['copyDir'],function(){
+        console.log('执行完毕');
+    });
     const server = serve(__dirname+'/dist', {
         port: 8088,
         ignore: ['node_modules']
