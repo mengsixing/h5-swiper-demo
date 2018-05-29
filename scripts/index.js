@@ -50,8 +50,8 @@ $(function () {
         $('.part2').show();
         var swiper = new Swiper('.swiper-container', {
           direction: 'vertical',
-          // slidesPerView: 1,
-          // freeMode: true,
+          slidesPerView: 1,
+          freeMode: true,
           on: {
             touchStart() {
               var hand = $('.hand');
@@ -82,7 +82,8 @@ $(function () {
               if(progress>=0.88){
                 contentText.eq(5).show().addClass('animated fadeIn');
               }
-              if( (progress>=0.1 && progress< 0.2) ||(progress>=0.3 && progress< 0.4) || (progress>=0.5 && progress< 0.6) || (progress>=0.7 && progress<= 0.8) ){
+              // 0.1 0.19 . 0.24 0.33 . 0.45 . 0.57 . 0.67 . 0.9
+              if( (progress>=0.1 && progress< 0.19) ||(progress>=0.24 && progress< 0.33) || (progress>=0.45 && progress< 0.57) || (progress>=0.67 && progress<= 0.9) ){
                   $('.car').removeClass('fadeIn');
                   $('.car').addClass('animated fadeOut');
               }else{

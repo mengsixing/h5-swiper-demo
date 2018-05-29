@@ -26,6 +26,7 @@ body {
     -webkit-transform: rotate(360deg) rotateZ(90deg);
             transform: rotate(360deg) rotateZ(90deg); } }
 
+/* 任务下落动画 */
 @-webkit-keyframes rendown {
   from {
     -webkit-transform: translate(0vw);
@@ -35,7 +36,6 @@ body {
     -webkit-transform: translate(-70vw);
             transform: translate(-70vw);
     opacity: 0; } }
-
 @keyframes rendown {
   from {
     -webkit-transform: translate(0vw);
@@ -45,6 +45,44 @@ body {
     -webkit-transform: translate(-70vw);
             transform: translate(-70vw);
     opacity: 0; } }
+
+@-webkit-keyframes birdfly {
+  from {
+    -webkit-transform: translate(25vw, 60vw);
+            transform: translate(25vw, 60vw); }
+  to {
+    -webkit-transform: translate(300vw, -100vh);
+            transform: translate(300vw, -100vh); } }
+
+@keyframes birdfly {
+  from {
+    -webkit-transform: translate(25vw, 60vw);
+            transform: translate(25vw, 60vw); }
+  to {
+    -webkit-transform: translate(300vw, -100vh);
+            transform: translate(300vw, -100vh); } }
+
+@-webkit-keyframes birdfly2 {
+  0% {
+    -webkit-transform: translate(80vw, 15vw);
+            transform: translate(80vw, 15vw); }
+  50% {
+    -webkit-transform: translate(15vw, 25vw);
+            transform: translate(15vw, 25vw); }
+  100% {
+    -webkit-transform: translate(-100vw, 5vw);
+            transform: translate(-100vw, 5vw); } }
+
+@keyframes birdfly2 {
+  0% {
+    -webkit-transform: translate(80vw, 15vw);
+            transform: translate(80vw, 15vw); }
+  50% {
+    -webkit-transform: translate(15vw, 25vw);
+            transform: translate(15vw, 25vw); }
+  100% {
+    -webkit-transform: translate(-100vw, 5vw);
+            transform: translate(-100vw, 5vw); } }
 
 /* 提示点闪动 */
 @-webkit-keyframes fadein {
@@ -116,11 +154,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
+    font-size: 24px;
     background-image: url("http://p97lek8up.bkt.clouddn.com/part1.png"); }
     .part1 .part1-container .circle {
       display: none;
       -webkit-animation: keeproute 2s linear infinite;
               animation: keeproute 2s linear infinite; }
+    .part1 .part1-container .part1-container_hand {
+      width: 80px; }
 
 .part2 {
   height: 100%; }
@@ -135,8 +177,8 @@ body {
     background-size: contain; }
     .swiper-slide .swiper-slide-content .tip-icon {
       width: 5%;
-      -webkit-animation: fadein 2s linear infinite;
-              animation: fadein 2s linear infinite; }
+      -webkit-animation: fadein 1s linear infinite;
+              animation: fadein 1s linear infinite; }
     .swiper-slide .swiper-slide-content .scene-content-dialog {
       display: none;
       position: absolute;
@@ -165,14 +207,17 @@ body {
           margin-bottom: 20px; }
     .swiper-slide .swiper-slide-content .scene-content-text {
       position: absolute;
-      font-size: 12px;
+      font-size: 16px;
       color: white;
-      bottom: 15%;
+      bottom: 5%;
       left: 0;
       right: 0;
       text-align: center;
       display: none;
       transition: 5s; }
+      .swiper-slide .swiper-slide-content .scene-content-text .scene-content-text_big {
+        font-size: 24px;
+        font-family: cursive; }
   .swiper-slide .scene-content1 {
     display: flex;
     justify-content: center;
@@ -232,9 +277,17 @@ body {
 
 .scene-content1-2 {
   background-image: url("http://p97lek8up.bkt.clouddn.com/1-2.png"); }
+  .scene-content1-2 .scene-contnet1-2-action {
+    width: 50%;
+    -webkit-animation: birdfly 3s linear infinite;
+            animation: birdfly 3s linear infinite; }
 
 .scene-content2-3 {
   background-image: url("http://p97lek8up.bkt.clouddn.com/2-3.png"); }
+  .scene-content2-3 .scene-contnet2-3-action {
+    width: 50%;
+    -webkit-animation: birdfly2 3s linear infinite;
+            animation: birdfly2 3s linear infinite; }
 
 .scene-content3-4 {
   background-image: url("http://p97lek8up.bkt.clouddn.com/3-4.png"); }

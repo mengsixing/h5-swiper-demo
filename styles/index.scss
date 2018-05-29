@@ -23,6 +23,8 @@ body {
   }
 }
 
+/* 任务下落动画 */
+
 @keyframes rendown {
   from {
     transform: translate(0vw);
@@ -31,6 +33,27 @@ body {
   to {
     transform: translate(-70vw);
     opacity: 0;
+  }
+}
+
+@keyframes birdfly {
+  from {
+    transform: translate(25vw,60vw);
+  }
+  to {
+    transform: translate(300vw,-100vh);
+  }
+}
+
+@keyframes birdfly2 {
+  0% {
+    transform: translate(80vw,15vw);
+  }
+  50%{
+    transform:translate(15vw, 25vw);
+  }
+  100% {
+    transform: translate(-100vw,5vw);
   }
 }
 
@@ -105,11 +128,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
+    font-size: 24px;
     @extend .background;
     background-image: url('http://p97lek8up.bkt.clouddn.com/part1.png');
     .circle {
       display: none;
       animation: keeproute 2s linear infinite;
+    }
+    .part1-container_hand {
+      width: 80px;
     }
   }
 }
@@ -129,7 +157,7 @@ body {
     background-size: contain;
     .tip-icon {
       width: 5%;
-      animation: fadein 2s linear infinite;
+      animation: fadein 1s linear infinite;
     }
     .scene-content-dialog {
       display: none;
@@ -164,14 +192,18 @@ body {
     }
     .scene-content-text{
       position: absolute;
-      font-size: 12px;
+      font-size: 16px;
       color: white;
-      bottom: 15%;
+      bottom: 5%;
       left: 0;
       right: 0;
       text-align: center;
       display: none;
       transition: 5s;
+      .scene-content-text_big{
+        font-size: 24px;
+        font-family: cursive;
+      }
     }
   }
   .scene-content1 {
@@ -259,10 +291,19 @@ body {
 .scene-content1-2 {
   @extend .background;
   background-image: url('http://p97lek8up.bkt.clouddn.com/1-2.png');
+  .scene-contnet1-2-action{
+    width: 50%;
+    animation: birdfly 3s linear infinite;
+  }
 }
 .scene-content2-3 {
   @extend .background;
   background-image: url('http://p97lek8up.bkt.clouddn.com/2-3.png');
+  .scene-contnet2-3-action{
+    width: 50%;
+    
+    animation: birdfly2 3s linear infinite;
+  }
 }
 .scene-content3-4 {
   @extend .background;
