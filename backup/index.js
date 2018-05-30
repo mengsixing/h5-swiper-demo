@@ -31,9 +31,7 @@ $(function () {
     }else{
       dialog.hide();
     }
-  });
-  $('.scene-content-go').click(function(){
-    location.href='https://mp.weixin.qq.com/s/IhbZwH0YLnhzjyvMItTgFg';
+    
   });
 
   // 进入part2
@@ -54,7 +52,6 @@ $(function () {
           direction: 'vertical',
           slidesPerView: 1,
           freeMode: true,
-          click:true,
           on: {
             touchStart() {
               var hand = $('.hand');

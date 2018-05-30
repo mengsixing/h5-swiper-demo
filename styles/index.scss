@@ -132,12 +132,19 @@ body {
     font-size: 24px;
     @extend .background;
     background-image: url('http://p97lek8up.bkt.clouddn.com/part1.png');
+    .text0 {
+      position: absolute;
+      left: 6%;
+      width: 300px;
+    }
     .circle {
       display: none;
       animation: keeproute 2s linear infinite;
     }
     .part1-container_hand {
       width: 80px;
+      position: absolute;
+      margin-left: 15%;
     }
   }
 }
@@ -156,7 +163,7 @@ body {
     position: absolute;
     background-size: contain;
     .tip-icon {
-      width: 5%;
+      width: 7%;
       animation: fadein 1s linear infinite;
     }
     .scene-content-dialog {
@@ -200,9 +207,8 @@ body {
       text-align: center;
       display: none;
       transition: 5s;
-      .scene-content-text_big{
-        font-size: 24px;
-        font-family: cursive;
+      img{
+        width: 80%;
       }
     }
   }
@@ -211,7 +217,7 @@ body {
     justify-content: center;
     align-items: center;
     @extend .background;
-    background-image: url('http://p97lek8up.bkt.clouddn.com/n-scene1.png');
+    background-image: url('http://p97lek8up.bkt.clouddn.com/n-scene11.png');
     .hand_shake {
       width: 8%;
       animation-duration: 5s;
@@ -228,7 +234,7 @@ body {
   }
   
   .scene-content2 {
-    background-image: url('http://p97lek8up.bkt.clouddn.com/n-scene2.png');
+    background-image: url('http://p97lek8up.bkt.clouddn.com/n-scene21.png');
     @extend .background;
     .xuankongshi {
       position: absolute;
@@ -237,7 +243,7 @@ body {
     }
   }
   .scene-content3 {
-    background-image: url('http://p97lek8up.bkt.clouddn.com/n-scene3.png');
+    background-image: url('http://p97lek8up.bkt.clouddn.com/n-scene31.png');
     @extend .background;
     .jiulongbi {
       position: absolute;
@@ -250,7 +256,7 @@ body {
     }
   }
   .scene-content4 {
-    background-image: url('http://p97lek8up.bkt.clouddn.com/n-scene4.png');
+    background-image: url('http://p97lek8up.bkt.clouddn.com/n-scene41.png');
     @extend .background;
     .hengshan {
       position: absolute;
@@ -263,7 +269,7 @@ body {
     }
   }
   .scene-content5 {
-    background-image: url('http://p97lek8up.bkt.clouddn.com/n-scene5.png');
+    background-image: url('http://p97lek8up.bkt.clouddn.com/n-scene51.png');
     @extend .background;
     .meishi {
       position: absolute;
@@ -275,7 +281,7 @@ body {
     }
   }
   .scene-content6 {
-    background-image: url('http://p97lek8up.bkt.clouddn.com/n-scene6.png');
+    background-image: url('http://p97lek8up.bkt.clouddn.com/n-scene61.png');
     @extend .background;
     .gucheng {
       position: absolute;
@@ -285,12 +291,26 @@ body {
     .scene-content-name{
       right: 10%;
     }
+    .scene-content-go{
+      position: absolute;
+      right: 41%;
+      bottom: 30%;
+    }
+    .tip-icon{
+      left:13%;
+    }
+    .scene-content-clould{
+      left:13%;
+    }
+    .scene-content-dialog{
+      left: 37%;
+    }
   }
 }
 
 .scene-content1-2 {
   @extend .background;
-  background-image: url('http://p97lek8up.bkt.clouddn.com/1-2.png');
+  background-image: url('http://p97lek8up.bkt.clouddn.com/1-21.png');
   .scene-contnet1-2-action{
     width: 50%;
     animation: birdfly 3s linear infinite;
@@ -298,7 +318,7 @@ body {
 }
 .scene-content2-3 {
   @extend .background;
-  background-image: url('http://p97lek8up.bkt.clouddn.com/2-3.png');
+  background-image: url('http://p97lek8up.bkt.clouddn.com/2-31.png');
   .scene-contnet2-3-action{
     width: 50%;
     
@@ -307,13 +327,13 @@ body {
 }
 .scene-content3-4 {
   @extend .background;
-  background-image: url('http://p97lek8up.bkt.clouddn.com/3-4.png');
+  background-image: url('http://p97lek8up.bkt.clouddn.com/3-41.png');
 }
 .scene-content4-5 {
   @extend .background;
-  background-image: url('http://p97lek8up.bkt.clouddn.com/4-5.png');
+  background-image: url('http://p97lek8up.bkt.clouddn.com/4-51.png');
 }
 .scene-content5-6 {
   @extend .background;
-  background-image: url('http://p97lek8up.bkt.clouddn.com/5-6.png');
+  background-image: url('http://p97lek8up.bkt.clouddn.com/5-61.png');
 }
